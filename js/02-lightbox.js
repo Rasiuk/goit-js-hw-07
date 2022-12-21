@@ -18,14 +18,9 @@ function createGaleryCard(galleryItems) {
     })
     .join("");
 }
-imagesContainer.addEventListener("click", (evt) => {
-  evt.preventDefault();
-  if (evt.target.nodeName !== "IMG") {
-    return;
-  }
-  let gallery = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionDelay: 250,
-  });
-  gallery.on("show.simplelightbox", function () {});
+
+let gallery = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
 });
+gallery.on("show.simplelightbox", function () {});
